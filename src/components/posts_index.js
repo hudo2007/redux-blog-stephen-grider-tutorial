@@ -11,10 +11,12 @@ import { Link } from 'react-router';
 
 class PostsIndex extends Component {
   componentWillMount() {
+    console.log("componentWillMount called")
     this.props.fetchPosts();
   }
 
   renderPosts() {
+    console.log("renderPosts this.props.posts: ", this.props.posts)
     return this.props.posts.map((post) => {
       return (
         <li className="list-group-item" key={post.id}>
@@ -45,6 +47,7 @@ class PostsIndex extends Component {
 }
 
 function mapStateToProps(state) {
+  console.log("mapStateToProps var state: ",state)
   return { posts: state.posts.all };
 }
 

@@ -10,6 +10,7 @@ const ROOT_URL = 'http://reduxblog.herokuapp.com/api';
 const API_KEY = '?key=kaboombangbishbash';
 
 export function fetchPosts() {
+  console.log("axncreator fetchPosts called")
   const request = axios.get(`${ROOT_URL}/posts${API_KEY}`)
 
   return {
